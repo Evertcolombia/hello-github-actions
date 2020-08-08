@@ -1,0 +1,13 @@
+name: PullPreview
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: run file
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v2
+      run : ./scripts/build.sh
