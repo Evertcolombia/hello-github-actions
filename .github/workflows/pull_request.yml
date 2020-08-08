@@ -1,14 +1,12 @@
 name: PullPreview
 on:
-  push:
   pull_request:
-    types: [labeled, unlabeled, closed]
+    branches:
+      - master
 
 jobs:
   build:
     name: run file
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: pullpreview/action@v3
       run: ./scripts/build.sh
