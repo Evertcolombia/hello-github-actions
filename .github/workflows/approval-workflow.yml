@@ -14,7 +14,6 @@ jobs:
         script: |
             whoami
             echo "Luxy goleador" >> README.md
-            ls
             cat README.md
         #env:
         #APPROVALS: "1"
